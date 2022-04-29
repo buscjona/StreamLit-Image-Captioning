@@ -9,5 +9,5 @@ st.text("the way humans analyze images.")
 st.text("")
 
 data_load_state = st.subheader("Loading data...")
-data = pd.read_csv("sample_data_oneMill.csv")
+data = pd.read_csv("https://github.com/buscjona/StreamLit-Image-Captioning/blob/main/sample_data_oneMill.csv")
 data_load_state.subheader("Loading data...done!")
