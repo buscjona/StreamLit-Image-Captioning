@@ -35,3 +35,6 @@ def get_image():
 
 if st.button("Get a random image from the dataset."):
     get_image()
+
+    
+st.text("Hello")
