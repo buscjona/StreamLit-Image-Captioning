@@ -3,7 +3,8 @@ import streamlit as st
 import pandas as pd
 
 st.title("Image Caption Generator")
-st.text("Hello, we are Jonas, Moritz and Ole and our goal is to build, explain and present")
+st.header("Project description")
+st.text("Hello, we are Jonas, Moritz and Ole! Our goal is to build, explain and present")
 st.text("an image caption generator using Deep Learning and Neural Networks. We use these")
 st.text("two subtypes of machine learning, as the combination of the two is closest to ")
 st.text("the way humans analyze images.")
@@ -17,10 +18,10 @@ def load_data():
     return df
 
 
-data_load_state = st.subheader("Loading data...")
+data_load_state = st.header("Loading data...")
 df = load_data()
 
-data_load_state.subheader("Comparison generated caption vs. real caption:")
+data_load_state.header("Comparison generated caption vs. real caption:")
 
 
 def get_image():
