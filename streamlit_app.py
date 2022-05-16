@@ -2,7 +2,7 @@ import random
 import streamlit as st
 import pandas as pd
 
-st.markdown("""
+st.write("""
 # Image Caption Generator
 Hello, we are Jonas, Moritz and Ole and our goal is to build, explain and present an image caption generator using Deep 
 Learning and Neural Networks. We use these two subtypes of machine learning, as the combination of the two is closest 
