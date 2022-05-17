@@ -2,7 +2,7 @@
 This file contains all the articles and more that support and inspire us in the design of our project.
 For our research, we mainly used Google Scholar, Papers with Code and Google.
 
-# Links
+# Related Work
 ● Visual Attention Network: https://paperswithcode.com/paper/visual-attention-network
 
 ● Image Captioning with visual attention: https://www.tensorflow.org/tutorials/text/image_captioning
