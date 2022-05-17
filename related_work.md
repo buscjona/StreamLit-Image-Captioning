@@ -5,6 +5,6 @@ For our research, we mainly used Google Scholar, Papers with Code and Google.
 # Links
 ● Visual Attention Network: https://paperswithcode.com/paper/visual-attention-network
 
-● Image Captioning with visual attention: https://github.com/Visual-Attention-Network/VAN-Classification
+● Image Captioning with visual attention: https://www.tensorflow.org/tutorials/text/image_captioning
 
 ● Image Captioning With TensorFlow And Keras: https://blog.paperspace.com/image-captioning-with-tensorflow/
