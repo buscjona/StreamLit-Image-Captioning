@@ -2,35 +2,43 @@ import random
 import streamlit as st
 import pandas as pd
 
-st.write("""
-# Image Caption Generator
-Hello, we are Jonas, Moritz and Ole and our goal is to build, explain and present an image caption generator using Deep 
-Learning and Neural Networks. We use these two subtypes of machine learning, as the combination of the two is closest 
-to the way humans analyze images.
+# Headline
+st.write("# ML4B - Image Caption Generator")
+
+# Project explanation
+st.header("Short project explanation")
+st.write(""" Hello, we are Jonas, Moritz and Ole. Together we have set ourselves the goal of building, explaining and 
+presenting an image caption generator using Deep Learning and its Neural Networks. We use these subtype of machine 
+learning, as it is the closest to the way humans analyze images. Based on this, we want to compare our own generated 
+caption with the actual caption of the image. The tip of the iceberg would be if we manage to algorithmically 
+evaluate the appropriateness of our caption.
 """)
 
 
+# Data understanding
+
+
+# Load data
 @st.cache
 def load_data():
-    df = pd.read_csv("https://media.githubusercontent.com/media/buscjona/StreamLit-Image-Captioning"
-                     "/main/sample_data_oneMill.csv")
-    return df
+    dataframe = pd.read_csv("https://media.githubusercontent.com/media/buscjona/StreamLit-Image-Captioning"
+                            "/main/sample_data_oneMill.csv")
+    return dataframe
 
 
-data_load_state = st.subheader("Loading data...")
+data_load_state = st.header("Loading data...")
 df = load_data()
 
-data_load_state.subheader("Comparison generated caption vs. real caption:")
+data_load_state.header("Generated caption vs. real caption:")
 
 
+# Get image
 def get_image():
     column = random.randint(0, 999999)
     url = df.iloc[column]["URL"]
     st.image(url)
-    st.write("real caption:")
-    st.write(df.iloc[column]["TEXT"])
-    st.write("URL:")
-    st.write(url)
+    st.write("Real caption: " + df.iloc[column]["TEXT"])
+    st.write("URL: " + url)
 
 
 if st.button("Get a random image from the dataset."):
