@@ -1,5 +1,5 @@
 # StreamLit-Image-Captioning
 
-https://share.streamlit.io/buscjona/streamlit-image-captioning/main
+Visit our application: https://share.streamlit.io/buscjona/streamlit-image-captioning/main
 
 # Our project
