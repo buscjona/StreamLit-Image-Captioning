@@ -20,12 +20,12 @@ st.header("Our current data preparation process")
 with st.expander("1. Data Understanding"):
     st.write("""For our project we are using the LAION data set, which is available to us as a CSV file. It is currently 
     the largest freely accessible image-text dataset in the world (240TB). The CSV file contains various attributes, 
-    for example URL, TEXT, NSFW or similarity. The URL can be used to load and numerous images can be loaded and 
-    displayed. The data set sets the ground for our goal of generating image captions. Of course it is much too 
+    for example URL, TEXT, NSFW or similarity. The URL can be used to load numerous images and display them. 
+    The data set sets the ground for our goal of generating image captions. Of course it is  
     too large in its actual form, which is why we decided to use a smaller sample. We agreed on a sample size of about 
-    1,000 - 5,000 data. However, we are still in the process of filtering the data set in order to focus on a specific 
+    1,000 - 5,000 examples. However, we are still in the process of filtering the data set in order to focus on a specific 
     theme. Our attempts so far were not quite satisfactory, so feel free to give us a hint on how you would filter the 
-    data set filter the dataset in order to get a specific theme. One of the problems of our project could be the 
+    data set in order to limit it to a specific theme. One of the problems of our project could be the 
     comparison of the image captions, because some of the captions are very specific and do not always reflect the 
     actual content of the images.""")
 
