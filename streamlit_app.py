@@ -21,11 +21,11 @@ with st.expander("1. Data Understanding"):
     st.write("""For our project we are using the LAION data set, which is available to us as a CSV file. It is currently 
     the largest freely accessible image-text dataset in the world (240TB). The CSV file contains various attributes, 
     for example URL, TEXT, NSFW or similarity. The URL can be used to load numerous images and display them. 
-    The data set sets the ground for our goal of generating image captions. Of course it is  
-    too large in its actual form, which is why we decided to use a smaller sample. We agreed on a sample size of about 
-    1,000 - 5,000 examples. However, we are still in the process of filtering the data set in order to focus on a specific 
-    theme. One of the problems of our project could be the comparison of the image captions, because some of the captions 
-    are very specific and do not always reflect the actual content of the images.""")
+    The data set sets the ground for our goal of generating image captions. Of course it is too large in its actual form, 
+    which is why we decided to use a smaller sample. We agreed on a sample size of about 1,000 - 5,000 examples. However,
+    we are still in the process of filtering the data set in order to focus on a specific theme. One of the problems of 
+    our project could be the comparison of the image captions, because some of the captions are very specific and do not 
+    always reflect the actual content of the images.""")
 
 with st.expander("2. Source Selection"):
     st.write("""As already explained in the previous step, we make use of the LAION data set. The total data for 
