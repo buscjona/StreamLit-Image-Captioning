@@ -18,34 +18,34 @@ st.write("")
 st.header("Our current data preparation process")
 
 with st.expander("1. Data Understanding"):
-    st.write("""Für unser Projekt benutzen wir den LAION Datensatz, welcher uns als CSV-Datei zur Verfügung steht. Es 
-    handelt sich hierbei um den derzeit größten frei zugänglichen Bild-Text-Datensatz der Welt (240TB). Die CSV-Datei 
-    beinhaltet verschiedene Attribute, beispielsweise URL, TEXT, NSFW oder similarity. Über die URL können die 
-    zahlreichen Biler geladen und dargestellt werden.
-    Der Datensatz bildet die Grundlage für unser Ziel des Generierens von Bildbeschreibungen. Natürlich ist er in 
-    seiner rohen Form viel zu groß, weshalb wir uns dazu entschlossen haben ein kleineres Sample benutzen. Auf eine 
-    bestimmte Größe des Samples haben wir uns allerdings noch nicht festgelegt, da wir gerade noch dabei sind den 
-    Datensatz zu filtern, um uns mit dem Image Caption Generator auf ein spezifisches Thema zu fokussieren. An dieser 
-    Stelle könnt ihr uns gerne einen Tipp geben, wie ihr den Datensatz am besten nach einem Bereich filtern würdet.
-    Eine Problematik unseres Projekts könnte das Vergleichen der Bildbeschreibungen sein, da manche Bildbeschreibungen
-    sehr speziell sind und nicht immer den tatsächlichen Inhalt der Bilder wiedergeben.""")
+    st.write("""For our project we are using the LAION data set, which is available to us as a CSV file. It is currently 
+    the largest freely accessible image-text dataset in the world (240TB). The CSV file contains various attributes, 
+    for example URL, TEXT, NSFW or similarity. The URL can be used to load and numerous images can be loaded and 
+    displayed. The data set sets the ground for our goal of generating image captions. Of course it is much too 
+    too large in its actual form, which is why we decided to use a smaller sample. We agreed on a sample size of about 
+    1,000 - 5,000 data. However, we are still in the process of filtering the data set in order to focus on a specific 
+    theme. Our attempts so far were not quite satisfactory, so feel free to give us a hint on how you would filter the 
+    data set filter the dataset in order to get a specific theme. One of the problems of our project could be the 
+    comparison of the image captions, because some of the captions are very specific and do not always reflect the 
+    actual content of the images.""")
 
 with st.expander("2. Source Selection"):
-    st.write("""Wie bereits in dem vorherigen Schritt erläutert, greifen wir auf den LAION Datensatz zurück. Die 
-    richtige Datenmenge zum Trainieren, Validieren und Testen werden wir in den nächsten Tagen festlegen, um mit dem 
-    Projekt zu starten. Um fehlende Datenquellen machen wir uns bei diesem Datensatz keine Gedanken.""")
+    st.write("""As already explained in the previous step, we make use of the LAION data set. The total data for 
+    training, validating and testing will initially be 1,000 - 5,000 images to not make the process too time-consuming.
+    We are not concerned about missing data sources with this data set.""")
 
 with st.expander("3. Data Cleaning"):
-    st.write("""Beschädigte Daten sind in unserem Datensatz nicht zu finden. In seltenen Fällen kann ein Bild nicht 
-    geladen werden. Gegen dieses Problem ist unserer Ansicht nach aber nichts zu machen. Wie ebenfalls in "Data
-    Understaning" erläutert, sind wie grade noch in dem Prozess unseren Datensatz zu filtern und irrelevante Bilder zu 
-    entfernen.""")
+    st.write("""Corrupted data cannot be found in our data set. In rare cases, an image cannot be be loaded. However, 
+    in our opinion there is nothing to be done about this problem. As also explained in "Data Understaning", we are 
+    still in the process of filtering our dataset and removing irrelevant images.""")
 
 with st.expander("4. Feature Engineering"):
-    st.write("""""")
+    st.write("""In terms of feature engineering, we decided to use the typical techniques for images:
+     Resizing, cropping, clipping, blur, etc. We are keeping other possibilities open in this area.""")
 
 with st.expander("5. Data Splitting"):
-    st.write(""".""")
+    st.write("""For the time being, we would like to start with a total of about 5,000 images. These will be divided 
+    into a Train Set (70-80%), Validation Set (10-15%) and Test Set (10-15%). The process of dividing will be random.""")
 st.write("")
 
 
