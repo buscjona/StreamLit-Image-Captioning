@@ -35,7 +35,7 @@ with st.expander("2. Source Selection"):
 with st.expander("3. Data Cleaning"):
     st.write("""Corrupted data cannot be found in our data set. In rare cases, an image cannot be be loaded. However, 
     in our opinion there is nothing to be done about this problem. As also explained in "Data Understaning", we are 
-    still in the process of filtering our dataset and removing irrelevant images.""")
+    still in the process of filtering and expanding our dataset.""")
 
 with st.expander("4. Feature Engineering"):
     st.write("""In terms of feature engineering, we decided to use the typical techniques for images:
