@@ -50,8 +50,7 @@ st.write("")
 # Load data
 @st.cache
 def load_data():
-    dataframe = pd.read_csv("https://media.githubusercontent.com/media/buscjona/StreamLit-Image-Captioning"
-                            "/main/sample_data_oneMill.csv")
+    dataframe = pd.read_csv("https://raw.githubusercontent.com/buscjona/StreamLit-Image-Captioning/main/data%20subsets/subsets.csv")
     return dataframe
 
 
