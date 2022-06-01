@@ -50,8 +50,9 @@ st.write("")
 # Load data
 @st.cache
 def load_data():
-    dataframe = pd.read_csv("https://media.githubusercontent.com/media/buscjona/StreamLit-Image-Captioning/main/sample_data_oneMill.csv")
-    return dataframe
+    df = pd.read_csv("https://raw.githubusercontent.com/buscjona/StreamLit-Image-Captioning/main/data%20subsets/"
+                     "subsets.csv")
+    return df
 
 
 data_load_state = st.header("Loading data...")
@@ -62,7 +63,7 @@ data_load_state.header("Generated caption vs. real caption:")
 
 # Get image
 def get_image():
-    column = random.randint(0, 999999)
+    column = random.randint(0, len(df) - 1)
     url = df.iloc[column]["URL"]
     st.image(url)
     st.write("Real caption: " + df.iloc[column]["TEXT"])
