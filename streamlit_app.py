@@ -64,10 +64,12 @@ data_load_state.header("Generated caption vs. real caption:")
 # Get image
 def get_image():
     column = random.randint(0, len(df) - 1)
-    url = df.iloc[column]["URL"]
+    url = df.iloc[column]["url"]
     st.image(url)
-    st.write("Real caption: " + df.iloc[column]["TEXT"])
-    st.write("Real caption: None")
+    st.write("Real caption: ")
+    st.write(df.iloc[column]["caption"])
+    st.write("URL:")
+    st.write(url)
 
 
 if st.button("Get a random image from the dataset"):
