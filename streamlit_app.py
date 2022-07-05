@@ -1,6 +1,53 @@
+from pyexpat import model
 import random
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+import numpy as np
+import matplotlib.pyplot as plt
+import pickle
 import streamlit as st
 import pandas as pd
+from model_test import show, image_captioning, org_caption
+import streamlit as st
+from transformers import VisionEncoderDecoderModel, ViTFeatureExtractor, AutoTokenizer
+import torch
+from PIL import Image
+
+#preloading the model
+model = VisionEncoderDecoderModel.from_pretrained("nlpconnect/vit-gpt2-image-captioning")
+feature_extractor = ViTFeatureExtractor.from_pretrained("nlpconnect/vit-gpt2-image-captioning")
+tokenizer = AutoTokenizer.from_pretrained("nlpconnect/vit-gpt2-image-captioning")
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+model.to(device)
+
+max_length = 16
+num_beams = 4
+gen_kwargs = {"max_length": max_length, "num_beams": num_beams}
+
+#caption generator
+def predict_step(image_paths):
+  images = []
+  for image_path in image_paths:
+    i_image = Image.open(image_path)
+    if i_image.mode != "RGB":
+      i_image = i_image.convert(mode="RGB")
+
+    images.append(i_image)
+
+  pixel_values = feature_extractor(images=images, return_tensors="pt").pixel_values
+  pixel_values = pixel_values.to(device)
+
+  output_ids = model.generate(pixel_values, **gen_kwargs)
+
+  preds = tokenizer.batch_decode(output_ids, skip_special_tokens=True)
+  preds = [pred.strip() for pred in preds]
+  return preds
+
+
+
 
 # Headline
 st.write("# ML4B - Image Caption Generator")
@@ -52,13 +99,13 @@ st.write("")
 # Load data
 @st.cache
 def load_data():
-    dataframe = pd.read_csv("https://raw.githubusercontent.com/buscjona/StreamLit-Image-Captioning/main/data%20subsets/"
-                            "subsets.csv")
+    dataframe = pd.read_csv("")
     return dataframe
 
 
 data_load_state = st.header("Loading data...")
-df = load_data()
+
+#df = load_data()
 
 data_load_state.header("Generated caption vs. real caption:")
 
@@ -74,5 +121,12 @@ def get_image():
     st.write(url)
 
 
-if st.button("Get a random image from the dataset"):
-    get_image()
+#center the button
+
+col1, col2, col3 = st.columns([1,1,1])
+#Generate caption to corresponding image
+with col1:
+    pass
+with col2:
+    if st.button("Generate caption:"):
+        st.write(predict_step(get_image())
