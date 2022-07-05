@@ -112,13 +112,13 @@ data_load_state.header("Generated caption vs. real caption:")
 
 # Get image
 def get_image():
-    column = random.randint(0, len(df) - 1)
-    url = df.iloc[column]["url"]
-    st.image(url)
-    st.write("Real caption: ")
-    st.write(df.iloc[column]["caption"])
-    st.write("URL:")
-    st.write(url)
+    z = random.randint(0,500)
+    pic = list(features.keys())[z]
+    image = features[pic].reshape((1,2048))
+    x = plt.imread(images + pic)
+    st.image(x)
+    st.write("Generated caption:", image_captioning(image))
+    st.write("Original caption:, ", org_caption(pic))
 
 
 #center the button
@@ -129,4 +129,4 @@ with col1:
     pass
 with col2:
     if st.button("Generate caption:"):
-        st.write(predict_step(get_image())
+        get_image()
