@@ -1,15 +1,7 @@
 from pyexpat import model
 import random
-import tensorflow as tf
-from tensorflow import keras
-from tensorflow.keras.models import load_model
-from tensorflow.keras.preprocessing.sequence import pad_sequences
-import numpy as np
 import matplotlib.pyplot as plt
-import pickle
-import streamlit as st
 import pandas as pd
-from model_test import show, image_captioning, org_caption
 import streamlit as st
 from transformers import VisionEncoderDecoderModel, ViTFeatureExtractor, AutoTokenizer
 import torch
@@ -117,8 +109,8 @@ def get_image():
     image = features[pic].reshape((1,2048))
     x = plt.imread(images + pic)
     st.image(x)
-    st.write("Generated caption:", image_captioning(image))
-    st.write("Original caption:, ", org_caption(pic))
+    st.write("Generated caption:", predict_step(image))
+    #st.write("Original caption:, ", org_caption(pic))
 
 
 #center the button
