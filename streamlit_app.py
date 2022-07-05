@@ -87,18 +87,6 @@ with st.expander("5. Data Splitting"):
     random.""")
 st.write("")
 
-data_load_state.header("Generated caption vs. real caption:")
-
-
-# Get image
-#def get_image():
- #   z = random.randint(0,500)
-  #  pic = list(features.keys())[z]
-   # image = features[pic].reshape((1,2048))
-   # x = plt.imread(images + pic)
-   # st.image(x)
-   # st.write("Generated caption:", predict_step(image))
-    #st.write("Original caption:, ", org_caption(pic))
 
 
 #center the button
