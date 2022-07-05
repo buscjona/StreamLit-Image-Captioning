@@ -57,4 +57,5 @@ with col1:
     pass
 with col2:
     if st.button("Generate caption:"):
-        st.write(predict_step(['1200px-Almeida_Júnior_-_Saudade_(Longing)_-_Google_Art_Project.jpg']))
+        caption = predict_step(['1200px-Almeida_Júnior_-_Saudade_(Longing)_-_Google_Art_Project.jpg'])
+        st.write(caption)
