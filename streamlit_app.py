@@ -65,6 +65,8 @@ with col2:
     st.subheader('Caption Generator')
     user_choice = st.radio(label='Choose from either option', options=['Upload your own picture','Image from our dataset'])
     st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
+with col3:
+    pass
 
 
 if user_choice == 'Upload your own picture':
@@ -84,4 +86,6 @@ else:
             #picture = features[pic].reshape((1,2048))
             #picture = plt.imread(images + pic)
             gen_caption(picture)
+    with col3:
+        pass
     
