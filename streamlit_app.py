@@ -50,8 +50,7 @@ st.write("")
 
 
 #center the button
-
-col1, col2, col3 = st.columns([1,10,1])
+col1, col2, col3 = st.columns([1,1,1])
 #Generate caption to corresponding image
 with col1:
     pass
