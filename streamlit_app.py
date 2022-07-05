@@ -60,4 +60,4 @@ with col2:
         st.subheader('Generated caption:')
         with st.spinner(text='This may take a moment...'):
             caption = predict_step(['1200px-Almeida_Júnior_-_Saudade_(Longing)_-_Google_Art_Project.jpg'])
-        st.text_area(abel ='',value=caption[0], height =100])
+        st.text_area(label ='',value=caption[0], height =100)
