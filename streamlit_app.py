@@ -51,7 +51,7 @@ st.write("")
 
 #center the button
 
-col1, col2, col3 = st.columns([1,1,1])
+col1, col2, col3 = st.columns([2,2,2])
 #Generate caption to corresponding image
 with col1:
     pass
@@ -60,4 +60,4 @@ with col2:
         st.subheader('Generated caption:')
         with st.spinner(text='This may take a moment...'):
             caption = predict_step(['1200px-Almeida_Júnior_-_Saudade_(Longing)_-_Google_Art_Project.jpg'])
-        st.text_area(label ='',value=caption[0], height =100)
+        st.write(caption[0])
