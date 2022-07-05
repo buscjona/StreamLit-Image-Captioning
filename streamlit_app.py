@@ -56,6 +56,8 @@ col1, col2, col3 = st.columns([1,1,1])
 with col1:
     pass
 with col2:
-    if st.button("Generate caption:"):
-        caption = predict_step(['1200px-Almeida_Júnior_-_Saudade_(Longing)_-_Google_Art_Project.jpg'])
-        st.write(caption[0])
+    if st.button('Generate caption:'):
+        st.subheader('Generated caption:')
+        with st.spinner(text='This may take a moment...'):
+            caption = predict_step(['1200px-Almeida_Júnior_-_Saudade_(Longing)_-_Google_Art_Project.jpg'])
+        st.text_area(abel ='',value=caption[0], height =100])
