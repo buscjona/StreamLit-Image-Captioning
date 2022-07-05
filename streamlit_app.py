@@ -87,29 +87,17 @@ with st.expander("5. Data Splitting"):
     random.""")
 st.write("")
 
-
-# Load data
-@st.cache
-def load_data():
-    dataframe = pd.read_csv("")
-    return dataframe
-
-
-data_load_state = st.header("Loading data...")
-
-#df = load_data()
-
 data_load_state.header("Generated caption vs. real caption:")
 
 
 # Get image
-def get_image():
-    z = random.randint(0,500)
-    pic = list(features.keys())[z]
-    image = features[pic].reshape((1,2048))
-    x = plt.imread(images + pic)
-    st.image(x)
-    st.write("Generated caption:", predict_step(image))
+#def get_image():
+ #   z = random.randint(0,500)
+  #  pic = list(features.keys())[z]
+   # image = features[pic].reshape((1,2048))
+   # x = plt.imread(images + pic)
+   # st.image(x)
+   # st.write("Generated caption:", predict_step(image))
     #st.write("Original caption:, ", org_caption(pic))
 
 
@@ -121,4 +109,4 @@ with col1:
     pass
 with col2:
     if st.button("Generate caption:"):
-        get_image()
+        st.write(predict_step(['1200px-Almeida_Júnior_-_Saudade_(Longing)_-_Google_Art_Project.jpg']))
