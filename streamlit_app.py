@@ -58,4 +58,4 @@ with col1:
 with col2:
     if st.button("Generate caption:"):
         caption = predict_step(['1200px-Almeida_Júnior_-_Saudade_(Longing)_-_Google_Art_Project.jpg'])
-        st.write(caption)
+        st.write(caption[0])
